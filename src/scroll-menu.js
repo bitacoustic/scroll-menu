@@ -1,4 +1,9 @@
 /*
+ * scroll-menu.js
+ *
+ * Author: Eric C. Black (bitacoustic@gmail.com)
+ * Github: https://github.com/bitacoustic/scroll-menu
+ *
  * Track which content block is in view and give its associated label
  * the class "active". To mark the content blocks and labels, give them
  * ids like so:
