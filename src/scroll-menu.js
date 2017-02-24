@@ -30,7 +30,7 @@ function setScrollMenu(idBase, params = null) {
             //            console.log(animateDuration);
         }
     }
-    $('div[id^=' + idBase + '-content]').each(function () {
+    $('[id^=' + idBase + '-content]').each(function () {
         var containerKey = $(this).attr('id').split('-content-')[1],
             containerOffsetTop = $(this).offset().top;
         //console.log(containerKey, containerOffsetTop);
