@@ -4,74 +4,70 @@
  * Author: Eric C. Black (bitacoustic@gmail.com)
  * Github: https://github.com/bitacoustic/scroll-menu
  *
- * Track which content block is in view and give its associated label
- * the class "active". To mark the content blocks and labels, give them
- * ids like so:
+ * scroll-menu tracks which of a number of defined content blocks is in view
+ * and give its associated menu label the class "active".
  *
- * If idBase is "lorem", function will look for:
- *   1) containers having ids "lorem-container-1", "lorem-container-2", etc.
- *   2) labels having ids "lorem-label-1", "lorem-label-2", etc.
- * where the numbers (or other unique identifying strings) create an
- * association between the container and label.
+ * Clicking a menu label brings its associated content block into view,
+ * optionally with an animated delay.
+ *
+ * An offset can be defined where a section triggers its associated label as
+ * active. By default, it becomes active when, scrolling down, the top of the
+ * section hits the top of the viewport; or, scrolling up, the bottom of the
+ * section goes into view.
+ *
+ * jQuery is a dependency. Tested with jQuery 3.1.1
  *
  * Assertion: each label matches up with exactly one container; div positions
  * and vertical sizes do not change dynamically.
  **/
-function setScrollMenu(idBase, params = null) {
-    var containers = [],
-        triggerOffset = 0;
-    if (params) {
-        if (params.hasOwnProperty("triggerOffset")) {
-            triggerOffset = params.triggerOffset;
-            //            console.log(triggerOffset);
-        }
-        if (params.hasOwnProperty("animateDuration")) {
-            animateDuration = params.animateDuration;
-            //            console.log(animateDuration);
-        }
-    }
-    $('[id^=' + idBase + '-content]').each(function () {
-        var containerKey = $(this).attr('id').split('-content-')[1],
-            containerOffsetTop = $(this).offset().top;
-        //console.log(containerKey, containerOffsetTop);
-        containers.push({
-            key: containerKey,
-            offsetTop: containerOffsetTop
+function setScrollMenu(idBase, params) {
+    var sections = [];
+    $('[id^=' + idBase + '-section]').each(function () {
+        var sectionKey = $(this).attr('id').split('-section-')[1],
+            sectionOffsetTop = $(this).offset().top;
+        sections.push({
+            key: sectionKey,
+            offsetTop: sectionOffsetTop
         });
     });
-    //console.log(containers);
-    setScrollMenuHelper(idBase, containers, animateDuration, triggerOffset, true);
+    setScrollMenuHelper(idBase, sections, params, true);
     $(window).scroll(function () {
-        setScrollMenuHelper(idBase, containers, animateDuration, triggerOffset);
+        setScrollMenuHelper(idBase, sections, params);
     });
 };
 
-function setScrollMenuHelper(idBase, containers, animateDuration, triggerOffset, setHref = false) {
-    for (var i = 0; i < containers.length; i++) {
-        var offsetTop = (i === 0) ? 0 : containers[i].offsetTop - triggerOffset;
-        var offsetBottom = (i === containers.length - 1) ?
-            $(document).height() : (containers[i + 1].offsetTop - triggerOffset);
-        //console.log(offsetTop, offsetBottom);
-        var containerLabel = $('div[id=' + idBase + '-label-' + containers[i].key + ']');
+function setScrollMenuHelper(idBase, sections, params, setClick) {
+    var triggerOffset = 0;
+    if (params && params.hasOwnProperty("triggerOffset")) {
+        triggerOffset = params.triggerOffset;
+    }
+    for (var i = 0; i < sections.length; i++) {
+        var offsetTop = (i === 0) ? 0 : sections[i].offsetTop - triggerOffset;
+        var offsetBottom = (i === sections.length - 1) ?
+            $(document).height() : (sections[i + 1].offsetTop - triggerOffset);
+        var sectionLabel = $('[id=' + idBase + '-label-' + sections[i].key + ']');
         if ($(window).scrollTop() >= offsetTop && $(window).scrollTop() < offsetBottom) {
-            //console.log(containers[i].key, "is in view");
-            containerLabel.addClass('active');
+            sectionLabel.addClass('active');
         } else {
-            containerLabel.removeClass('active');
+            sectionLabel.removeClass('active');
         }
-        if (setHref === true) {
-            //            console.log(containers, i, containers[i].key);
-            // in ES6 'let i = 0' makes the i variable local to the loop, alleviating the need for a separate callback function
-            createScrollMenuOnclick('#' + idBase + '-label-' + containers[i].key, '#' + idBase + '-content-' + containers[i].key, animateDuration);
+        if (setClick && setClick === true) {
+            // (in ES6 'let i = 0' makes the i variable local to the loop,
+            // alleviating the need for a separate callback function)
+            createScrollMenuOnclick('#' + idBase + '-label-' + sections[i].key,
+                '#' + idBase + '-section-' + sections[i].key, params);
         }
     }
 };
 
-function createScrollMenuOnclick(fromDiv, toDiv, animateDuration) {
-    $(document).on('click', fromDiv, function () {
-        //        console.log("clicked on " + fromDiv + ", going to " + toDiv + " in " + animateDuration + " ms");
+function createScrollMenuOnclick(fromElem, toElem, params) {
+    var animateDuration = 0;
+    if (params && params.hasOwnProperty("animateDuration")) {
+        animateDuration = params.animateDuration;
+    }
+    $(document).on('click', fromElem, function () {
         $('body', 'html').animate({
-            scrollTop: $(toDiv).offset().top
+            scrollTop: $(toElem).offset().top
         }, animateDuration);
     });
 };
