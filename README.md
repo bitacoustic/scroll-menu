@@ -1,16 +1,27 @@
 # scroll-menu
 Easy menu system for a single-page site, with animated scrolling.
 
-TODO: Add a more thorough description and instructions
+There are other similar libraries available; I wasn't able to use external libraries on a particular client project so I wrote my own.
+
+## Purpose
+
+scroll-menu tracks which of a number of defined content blocks is in view and give its associated menu label the class "active".
+
+Clicking a menu label brings its associated content block into view, optionally with an animated delay.
+
+An offset can be defined where a content block triggers its associated label as active. By default, it becomes active when, scrolling down, the top of the block hits the top of the viewport; or, scrolling up, the bottom of the content block goes into view.
 
 ## Example of relevant code
 
 ## HTML
-Track which content block is in view and give its associated label the class "active". To mark the content blocks and labels, give them IDs like so:
 
-If idBase is "lorem", function will look for:
-  1) containers having ids "lorem-container-1", "lorem-container-2", etc.
-  2) labels having ids "lorem-label-1", "lorem-label-2", etc.
+To define the content blocks and labels, give them IDs like so:
+
+If the id base is "lorem", scroll-menu will look for:
+
+1. containers having ids "lorem-container-1", "lorem-container-2", etc.
+2. labels having ids "lorem-label-1", "lorem-label-2", etc.
+
 where the numbers (or other unique identifying strings) create an association between the container and label.
  
 ```
@@ -31,7 +42,7 @@ where the numbers (or other unique identifying strings) create an association be
 ```
 
 ## CSS
-Style the menu item labels. The 'active' class is added when the respective container is in focus.
+Style the menu item labels. The "active" class is added when the respective container is in focus.
 
 ```
 .lorem-label {
