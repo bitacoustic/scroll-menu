@@ -1,0 +1,34 @@
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+.lorem {
+    color: red;
+    background: #eee;
+    margin: 25px;
+    margin-left: 250px;
+    padding: 25px;
+}
+.lorem:after {
+    padding: 35px;
+    color: black;
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et consectetur orci, et suscipit enim. Vestibulum venenatis ligula ac tristique semper. Nulla accumsan interdum est, quis condimentum nibh pellentesque et. Praesent feugiat commodo tortor, quis mattis odio pellentesque nec. Praesent sed nisi ac mauris suscipit suscipit quis vitae tortor. Sed tristique vitae velit vitae tincidunt. Sed eleifend suscipit velit eget tristique. Pellentesque quam neque, varius nec egestas ac, consequat sed elit. Donec et tortor finibus, scelerisque risus a, rhoncus dolor. Proin condimentum elementum urna malesuada scelerisque. Cras blandit scelerisque erat, gravida aliquet ex maximus sed. Ut lacinia odio odio, vitae tincidunt leo lacinia sed. Mauris tristique mauris sit amet est suscipit eleifend. Vestibulum commodo iaculis elit, quis iaculis urna molestie in. Vivamus vel quam vitae elit ultricies molestie ut quis ante. Donec enim odio, consequat sed iaculis quis, posuere in metus. Nulla facilisi. Nunc tristique pulvinar sodales. Phasellus diam eros, gravida eu lectus at, sodales tincidunt dolor. Integer sagittis sed lorem in viverra. Pellentesque in tempus lorem. Suspendisse non libero ut erat faucibus molestie. Vestibulum sed turpis ex. Aliquam rutrum, velit bibendum bibendum bibendum, turpis orci luctus metus, ut pellentesque urna arcu in justo. Nam nec mauris vel quam iaculis tristique et nec urna. Aliquam tincidunt lobortis lectus quis pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce tristique eget ipsum et lacinia. Maecenas eget orci id mi pretium gravida malesuada sit amet dui. Etiam et varius est, sit amet sollicitudin est. Nulla porta eleifend enim in euismod. Nulla facilisi. Nunc auctor consequat sem non vestibulum. Duis mi eros, maximus eget felis id, congue dignissim odio. Mauris dignissim luctus nulla in rutrum. Nullam vulputate ac purus non viverra. Aliquam elementum ex vel augue vestibulum tincidunt.Etiam blandit, mi id semper sagittis, dolor ligula faucibus sapien, id aliquet leo leo sed tortor. Cras dictum feugiat nibh auctor maximus. Sed ultrices mollis porta. Curabitur non hendrerit justo, id mattis libero. Donec posuere sed sem eget tincidunt. Cras aliquet dolor in diam faucibus, quis porttitor tellus interdum. Ut id rutrum ligula. Nam euismod sapien purus, sit amet lacinia nisi blandit tempor. Nam sodales mauris neque, at egestas sem blandit nec. Etiam id erat lacus. In semper erat ac tellus facilisis euismod. Quisque imperdiet finibus dui id dictum. Mauris non semper velit. Proin tempus risus in purus condimentum molestie. Quisque lacinia purus eu ex euismod scelerisque. Nam quis est eget massa finibus dictum vitae fermentum metus. Integer et aliquam lectus, vel blandit metus. Integer in enim non ipsum sagittis consequat. Sed mattis mollis elit, at molestie justo euismod id. Duis condimentum eros vitae elit porta, in egestas tellus faucibus. Quisque id risus accumsan, interdum ex vitae, fermentum nibh. Cras molestie dictum varius. Vivamus tempus consectetur purus, nec volutpat neque placerat id. Phasellus condimentum lacus sed arcu congue pellentesque. Integer vitae lectus quis nunc viverra vehicula. Ut mauris neque, sodales et ultrices id, maximus vehicula odio. Ut vel ultricies metus, in aliquam tortor. Aenean et purus non nulla posuere facilisis id nec ante. Aenean eu luctus libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla aliquet est ac efficitur interdum. Duis lobortis ipsum quis mi malesuada, nec iaculis dolor consectetur. Praesent mi nisl, consectetur et sapien non, egestas pretium velit. Sed vitae magna eget neque blandit hendrerit ut suscipit tortor. Sed tincidunt, magna et tristique auctor, est augue aliquam ante, sed gravida tortor eros eu sem. Suspendisse cursus tempus ante. Sed condimentum a urna id porttitor. In eros felis, feugiat eu risus quis, venenatis viverra metus. Cras feugiat eu massa non varius. Vestibulum id porttitor massa, sed lobortis magna. Fusce scelerisque fermentum rutrum. Vivamus pharetra et justo vel fermentum. Quisque viverra tortor quis ex euismod sodales. Donec ac viverra purus. Nulla eget dui id nunc tempus dignissim id ac mi. Nam imperdiet tortor quam, et maximus est porta ut. Aliquam tincidunt vel ante eu lacinia. Donec id risus a ante consequat elementum. Praesent non eros dapibus, rhoncus lacus ac, semper nunc. In vestibulum, lectus sodales pellentesque cursus, augue leo sollicitudin elit, id aliquet odio massa sed neque. Aenean et sodales felis, congue cursus nulla. Fusce at turpis scelerisque lectus tempus bibendum nec eu ipsum. Vivamus tempus sit amet nisl id accumsan. Cras ante risus, sagittis malesuada eros non, efficitur ornare risus. Ut egestas euismod risus vel placerat. Nullam euismod scelerisque nisi eu elementum. Proin erat purus, elementum sed porttitor ut, dapibus ut metus. Sed sagittis tellus tincidunt nunc faucibus, quis tempus quam dignissim. Donec sagittis orci elit, eget hendrerit tortor faucibus ultrices. Nulla at ipsum et quam sodales posuere. Nulla accumsan elit sed fermentum euismod. Etiam aliquam pretium scelerisque. Sed dapibus erat at nulla consectetur, id placerat leo porta. Maecenas sed nulla quis urna commodo mollis. Maecenas pretium nisl id orci feugiat tincidunt ut vel tellus. Nam pellentesque elit non tortor lobortis, tincidunt euismod justo luctus. Vivamus iaculis leo id tempor placerat. Donec mattis sed nibh at porttitor. Pellentesque maximus congue suscipit. Sed a dui id urna aliquam blandit. Fusce sed laoreet libero. Proin porttitor mi pretium accumsan feugiat. Morbi vestibulum velit sit amet massa ultrices, in porta sapien sollicitudin. Integer nunc lectus, sollicitudin ut odio non, convallis laoreet diam. Ut et nulla non odio viverra aliquet. Quisque imperdiet mauris in dapibus placerat. Aenean scelerisque vestibulum elit at ultrices. Donec tincidunt eget magna in tristique. Sed eget mi ac nisi bibendum posuere non quis risus.";
+}
+#label-container {
+    background: #eaeaea;
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    width: 200px;
+    height: calc(100% - 50px);
+}
+.lorem-label {
+    color: black;
+    margin: 25px;
+    padding: 25px;
+    background: #fff;
+}
+.lorem-label.active {
+    color: red;
+}
